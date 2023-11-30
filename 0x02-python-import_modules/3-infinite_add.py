@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def addargs(*args):
-    if len(args) < 1:
-        return
     result = 0
     for num in args:
         result += int(num)
