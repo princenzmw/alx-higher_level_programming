@@ -12,5 +12,4 @@ if __name__ == "__main__":
     import sys
     arguments = sys.argv[1:]
     result = addargs(*arguments)
-    if result is not None:
-        print(result)
+    print(result)
