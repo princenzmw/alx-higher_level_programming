@@ -3,10 +3,10 @@ def search_replace(my_list, search, replace):
     if my_list is None:
         my_list = []
 
-    new_list = [x for x in my_list]
+    new_list = my_list.copy()
     
-    for i in range(len(new_list)):
-        if new_list[i] == search:
+    for i, value in enumerate(new_list):
+        if value == search:
             new_list[i] = replace
 
     return new_list
