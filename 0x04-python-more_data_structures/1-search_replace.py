@@ -4,6 +4,8 @@ def search_replace(my_list, search, replace):
         my_list = []
 
     new_list = my_list.copy()
+    if search not in new_list:
+        return new_list
     
     for i, value in enumerate(new_list):
         if value == search:
