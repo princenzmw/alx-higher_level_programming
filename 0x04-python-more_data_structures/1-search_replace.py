@@ -10,5 +10,7 @@ def search_replace(my_list, search, replace):
     for i, value in enumerate(new_list):
         if value == search:
             new_list[i] = replace
+        else:
+            new_list[i] = value
 
     return new_list
