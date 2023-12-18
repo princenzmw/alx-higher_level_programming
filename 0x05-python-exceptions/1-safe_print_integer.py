@@ -8,7 +8,5 @@ def safe_print_integer(value):
         status = True
     except TypeError:
         status = False
-    except:
-        status = False
 
     return status
