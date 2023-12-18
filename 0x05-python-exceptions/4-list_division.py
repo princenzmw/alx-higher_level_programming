@@ -2,6 +2,7 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     result = []
+    quotient = 0
 
     for x in range(list_length):
         try:
@@ -10,7 +11,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("wrong type")
             quotient = 0
         except ZeroDivisionError:
-            print("Division by 0")
+            print("division by 0")
             quotient = 0
         except IndexError:
             print("out of range")
