@@ -9,10 +9,10 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         status = True
     except ValueError as te:
-        print(f"Exception: {te}", file=sys.stderr)
+        print("Exception: {}".format(te), file=sys.stderr)
         status = False
     except TypeError as me:
-        print(f"{me}", file=sys.stderr)
+        print("{}".format(me), file=sys.stderr)
         status = False
 
     return status
