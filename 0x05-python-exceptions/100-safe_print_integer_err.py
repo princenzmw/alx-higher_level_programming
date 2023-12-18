@@ -12,7 +12,7 @@ def safe_print_integer_err(value):
         print(f"Exception: {te}", file=sys.stderr)
         status = False
     except TypeError as me:
-        print(me, file=sys.stderr)
+        print(f"{me}", file=sys.stderr)
         status = False
 
     return status
