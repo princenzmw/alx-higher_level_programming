@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
 class Square:
-    """ This is an empty class"""
+    """A class representing a square.
+
+    This class is currently empty and can be used as
+    a placeholder for future implementations related to squares.
+    """
     def __init__(self):
-        """ A class constructor """
+        """Constructor for the Square class.
+
+        This constructor initializes a Square object.
+        Currently, it takes no parameters.
+        """
