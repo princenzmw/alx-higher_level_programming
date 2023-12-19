@@ -12,9 +12,3 @@ class Square:
     Methods:
         None
     """
-    def __init__(self):
-        """Constructor for the Square class.
-
-        This constructor initializes a Square object.
-        Currently, it takes no parameters.
-        """
