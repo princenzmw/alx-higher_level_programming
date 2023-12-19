@@ -2,6 +2,7 @@
 """Square class.
 
 This class does nothing.
+
 """
 
 
