@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Square class for area. """
+""" Square class for working with a square. """
 
 
 class Square:
