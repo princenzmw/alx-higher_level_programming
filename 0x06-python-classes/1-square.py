@@ -9,7 +9,7 @@ class Square:
     """Represents a square shape.
 
     Attributes:
-        __size: Private instance attribute to store the size of the square.
+        size: Private instance attribute to store the size of the square.
 
     Methods:
         None
