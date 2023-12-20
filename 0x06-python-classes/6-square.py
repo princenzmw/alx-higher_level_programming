@@ -10,7 +10,15 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         '''
-        conductor for square class. for Instantiation
+        Constructor for Square class.
+
+        Args:
+            size (int): The size of the square, must be a non-negative integer.
+            position (tuple): The (x, y) position of the square, must be non-negative integers.
+
+        Raises:
+            TypeError: If size or position are not integers or if position is not a tuple.
+            ValueError: If size or position values are negative.
         '''
         self.__size = size
         self.__position = position
