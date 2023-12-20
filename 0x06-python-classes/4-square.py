@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Square class for area"""
+""" Square class for area. """
 
 
 class Square:
@@ -18,6 +18,8 @@ class Square:
     def size(self):
         '''
         property getter for the size of the square.
+        Return:
+            the initial size
         '''
         return self.__size
 
@@ -27,8 +29,6 @@ class Square:
         Property setter for the size of the square.
         Args:
             value(int): the new square's size.
-        Return:
-            None
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
