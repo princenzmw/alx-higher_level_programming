@@ -6,19 +6,11 @@
 class Square:
     '''
     Defines a square and calculates its area
-    Attributes:
-        size(int): size must be an integer greater than zero
-    Methods:
-        area: calculates the area based on size
     '''
 
     def __init__(self, size=0):
         '''
         conductor for square class.
-        Args:
-            None
-        Return:
-            None
         '''
         self.__size = size
 
