@@ -18,10 +18,6 @@ class Square:
     def size(self):
         '''
         property getter for the size of the square.
-        Args:
-            None
-        Return:
-            size
         '''
         return self.__size
 
@@ -46,8 +42,6 @@ class Square:
     def area(self):
         '''
         calculates the area of square
-        Args:
-            None
         Return:
             squared size
         '''
