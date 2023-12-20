@@ -44,11 +44,21 @@ class Square:
     def position(self):
         '''
         Property getter for the Private instance attribute: `position`
+        Return:
+            initial position tuple.
         '''
         return self.__position
 
     @position.setter
     def position(self, value):
+        '''
+        Property setter for the position to place the square.
+        Args:
+            value(tuple): with exactly two elements set the position.
+        Raises:
+            IndexError: If value has more than two elements.
+            TypeError: If value's element is not a positive integer.
+        '''
         if len(value) != 2:
             raise IndexError(
                     "position must be a tuple of 2 positive integers")
