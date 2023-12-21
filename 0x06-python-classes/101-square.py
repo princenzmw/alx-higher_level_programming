@@ -22,8 +22,8 @@ class Square:
                 position is not a tuple.
             ValueError: If size or position values are negative.
         '''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def __str__(self):
         """Show Python how to print the square my way"""
@@ -93,14 +93,14 @@ class Square:
         """ return spaces of the position. """
 
         postn = ""
-        if self.size == 0:
+        if not self.size:
             return "\n"
         for _ in range(self.position[1]):
             postn += "\n"
         for _ in range(self.size):
-            for _ in range(self.position[0]):
+            for x in range(self.position[0]):
                 postn += " "
-            for _ in range(self.size):
+            for y in range(self.size):
                 postn += "#"
             postn += "\n"
         return postn
