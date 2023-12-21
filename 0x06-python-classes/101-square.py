@@ -14,15 +14,17 @@ class Square:
 
         Args:
             size (int): The size of the square, must be a non-negative integer.
-            position (tuple): The (x, y) position of the square, must be non-negative integers.
+            position (tuple): The (x, y) position of the square,
+            must be non-negative integers.
 
         Raises:
-            TypeError: If size or position are not integers or if position is not a tuple.
+            TypeError: If size or position are not integers or if
+                position is not a tuple.
             ValueError: If size or position values are negative.
         '''
         self.__size = size
         self.__position = position
-    
+
     def __str__(self):
         """Show Python how to print the square my way"""
         return self.print_positiont()[:-1]
@@ -76,6 +78,8 @@ class Square:
         if len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
         if len([i for i in value if isinstance(i, int) and i >= 0]) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = value
 
     def area(self):
         '''
@@ -84,7 +88,7 @@ class Square:
             squared size
         '''
         return self.__size ** 2
-    
+
     def print_position(self):
         """ return spaces of the position. """
 
