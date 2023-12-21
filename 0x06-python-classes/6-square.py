@@ -85,27 +85,6 @@ class Square:
         '''
         return self.__size ** 2
 
-    def my_print(self):
-        '''
-        Prints the square with the character `#` to stdout
-        if size is zero, it prints a blank line.
-        '''
-        if self.__size == 0:
-            print()
-
-        if self.__position[1] > 0:
-            for _ in range(self.__position):
-                print("")
-
-        for y in range(1, self.area() + 1):
-            if y % self.__size == 1:
-                print(f"{'#' * self.__position[0] + 1}", end='')
-            else:
-                print('#', end='')
-
-            if y % self.__size == 0 and y > 0:
-                print()
-    
     def print_position(self):
         """ return spaces of the position. """
 
