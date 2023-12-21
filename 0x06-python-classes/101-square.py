@@ -7,6 +7,9 @@ class Square:
     '''
     Defines a square and calculates its area
     '''
+    def __str__(self):
+        """Show Python how to print the square my way"""
+        return self.print_positiont()[:-1]
 
     def __init__(self, size=0, position=(0, 0)):
         '''
@@ -24,10 +27,6 @@ class Square:
         '''
         self.size = size
         self.position = position
-
-    def __str__(self):
-        """Show Python how to print the square my way"""
-        return self.print_positiont()[:-1]
 
     @property
     def size(self):
