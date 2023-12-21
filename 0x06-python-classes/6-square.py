@@ -22,6 +22,10 @@ class Square:
         '''
         self.__size = size
         self.__position = position
+    
+    def __str__(self):
+        """ To assist my print function """
+        self.my_print()
 
     @property
     def size(self):
@@ -67,14 +71,11 @@ class Square:
             IndexError: If value has more than two elements.
             TypeError: If value's element is not a positive integer.
         '''
+        if not isinstance(value, tuple):
+            raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
-            raise IndexError(
-                    "position must be a tuple of 2 positive integers")
-        for x in value:
-            if not isinstance(x, int) or x < 0:
-                raise TypeError(
-                        "position must be a tuple of 2 positive integers")
-        self.__position = value
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if len([i for i in value if isinstance(i, int) and i >= 0]) != 2:
 
     def area(self):
         '''
@@ -91,7 +92,36 @@ class Square:
         '''
         if self.__size == 0:
             print()
-        for _ in range(self.__position[1]):
-            print()
-        for _ in range(self.__size):
-            print(f"{' ' * self.__position[0]}{'#' * self.__size}")
+
+        if self.__position[1] > 0:
+            for _ in range(self.__position):
+                print("")
+
+        for y in range(1, self.area() + 1):
+            if y % self.__size == 1:
+                print(f"{'#' * self.__position[0] + 1}", end='')
+            else:
+                print('#', end='')
+
+            if y % self.__size == 0 and y > 0:
+                print()
+    
+    def print_position(self):
+        """ return spaces of the position. """
+
+        postn = ""
+        if self.size == 0:
+            return "\n"
+        for _ in range(self.position[1]):
+            postn += "\n"
+        for _ in range(self.size):
+            for _ in range(self.position[0]):
+                postn += " "
+            for _ in range(self.size):
+                postn += "#"
+            postn += "\n"
+        return postn
+
+    def my_print(self):
+        """print the square in position"""
+        print(self.print_position(), end='')
