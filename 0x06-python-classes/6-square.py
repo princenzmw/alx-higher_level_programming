@@ -22,8 +22,8 @@ class Square:
             position is not a tuple.
             ValueError: If size or position values are negative.
         '''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def __str__(self):
         """ To assist my print function """
