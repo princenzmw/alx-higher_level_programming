@@ -1,22 +1,22 @@
 #!/usr/bin/python3
 import sys
 
-"""_summary_ """
+""" Queen of N chess """
 
 
 def is_safe(board, row, col, N):
-    """_summary_
+    """
+    Check if placing a queen in the given row and column is safe.
 
     Args:
-        board (_type_): _description_
-        row (_type_): _description_
-        col (_type_): _description_
-        N (_type_): _description_
+        board (list): Current state of the chessboard.
+        row (int): Row index.
+        col (int): Column index.
+        N (int): Size of the chessboard.
 
     Returns:
-        _type_: _description_
+        bool: True if it's safe, False otherwise.
     """
-    # Check if there is a queen in the same column
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
@@ -26,30 +26,27 @@ def is_safe(board, row, col, N):
 
 
 def print_solution(board, N):
-    """_summary_
+    """
+    Print the current solution of the N Queens problem.
 
     Args:
-        board (_type_): _description_
-        N (_type_): _description_
+        board (list): Current state of the chessboard.
+        N (int): Size of the chessboard.
     """
+    solution = []
     for i in range(N):
-        row_str = ""
-        for j in range(N):
-            if j == board[i]:
-                row_str += "Q"
-            else:
-                row_str += "."
-        print(row_str)
-    print()
+        solution.append([i, board[i]])
+    print(solution)
 
 
 def solve_nqueens(board, row, N):
-    """_summary_
+    """
+    Recursively solve the N Queens problem.
 
     Args:
-        board (_type_): _description_
-        row (_type_): _description_
-        N (_type_): _description_
+        board (list): Current state of the chessboard.
+        row (int): Current row being considered.
+        N (int): Size of the chessboard.
     """
     if row == N:
         print_solution(board, N)
@@ -61,10 +58,14 @@ def solve_nqueens(board, row, N):
 
 
 def nqueens(N):
-    """_summary_
+    """
+    Main function to solve the N Queens problem.
 
     Args:
-        N (_type_): _description_
+        N (str): Size of the chessboard.
+
+    Raises:
+        ValueError: If N is not a valid integer.
     """
     if not N.isdigit():
         print("N must be a number")
@@ -80,8 +81,6 @@ def nqueens(N):
 
 
 if __name__ == "__main__":
-    """_summary_
-    """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
