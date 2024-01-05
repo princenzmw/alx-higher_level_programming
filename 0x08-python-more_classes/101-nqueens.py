@@ -1,8 +1,21 @@
 #!/usr/bin/python3
 import sys
 
+"""_summary_ """
+
 
 def is_safe(board, row, col, N):
+    """_summary_
+
+    Args:
+        board (_type_): _description_
+        row (_type_): _description_
+        col (_type_): _description_
+        N (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     # Check if there is a queen in the same column
     for i in range(row):
         if board[i] == col or \
@@ -13,6 +26,12 @@ def is_safe(board, row, col, N):
 
 
 def print_solution(board, N):
+    """_summary_
+
+    Args:
+        board (_type_): _description_
+        N (_type_): _description_
+    """
     for i in range(N):
         row_str = ""
         for j in range(N):
@@ -25,6 +44,13 @@ def print_solution(board, N):
 
 
 def solve_nqueens(board, row, N):
+    """_summary_
+
+    Args:
+        board (_type_): _description_
+        row (_type_): _description_
+        N (_type_): _description_
+    """
     if row == N:
         print_solution(board, N)
         return
@@ -35,6 +61,11 @@ def solve_nqueens(board, row, N):
 
 
 def nqueens(N):
+    """_summary_
+
+    Args:
+        N (_type_): _description_
+    """
     if not N.isdigit():
         print("N must be a number")
         sys.exit(1)
@@ -49,6 +80,8 @@ def nqueens(N):
 
 
 if __name__ == "__main__":
+    """_summary_
+    """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
