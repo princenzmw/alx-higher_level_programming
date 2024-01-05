@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Now for Rectangle on Task 5 """
+""" Now for Rectangle on Task 6 """
 
 
 class Rectangle:
