@@ -2,6 +2,7 @@
 
 """ Rectangle class continued """
 
+
 class Rectangle:
     """
     Rectangle class represents a rectangle with width and height.
