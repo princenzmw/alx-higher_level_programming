@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" A Function that divides numbers (integers or float) from a matrix
+    and divide them by a given divider to return a new matrix."""
+
+
 def matrix_divided(matrix, div):
     """Matrix division
 
@@ -19,7 +23,8 @@ def matrix_divided(matrix, div):
         for two in one:
             if not isinstance(two, (int, float)):
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
+                    "matrix must be a matrix (list of lists) \
+                    of integers/floats"
                 )
     # Same as:
     # if not all(len(row) == len(matrix[0]) for row in matrix[1:]):
