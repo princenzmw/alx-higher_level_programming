@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+""" A Function that adds integers or float numbers """
+
+
 def add_integer(a, b=98):
-    """_summary_
+    """Add integers
 
     Args:
         a (int): First value for the addition. must be integer or float
-        b (int, optional): Second value for the addition. must be integer or float. Defaults to 98.
+        b (int, optional): Second value for the addition. must be integer
+            or float. Defaults to 98.
 
     Raises:
         TypeError: a must be an integer
