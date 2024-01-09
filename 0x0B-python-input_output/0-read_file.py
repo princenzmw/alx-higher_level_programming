@@ -10,5 +10,4 @@ def read_file(filename=""):
     """
     with open(filename, encoding="utf-8") as f:
         file_cont = f.read()
-
-    print(file_cont[:-1])
+        print(file_cont[:-1])
