@@ -1,10 +1,10 @@
 # 0x0B-python-input_output
 
-At the end of this module I'm expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google**: how to open a file, write text in a file, read full content of a file, read a file line by line, move cursor in a file, make sure a file is closed after using it, using `with` statement, What is `JSON`, serialization, deserialization, How to convert a Python data structure to a JSON string, and last but not least; How to convert a JSON string to a Python data structure.
+At the end of this module I'm expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/){:target="_blank"}, **without the help of Google**: how to open a file, write text in a file, read full content of a file, read a file line by line, move cursor in a file, make sure a file is closed after using it, using `with` statement, What is `JSON`, serialization, deserialization, How to convert a Python data structure to a JSON string, and last but not least; How to convert a JSON string to a Python data structure.
 
 ## Tasks
 
-0. [Read file](./0-read_file.py) Write a function that reads a text file (UTF8) and prints it to stdout:
+0. [Read file](./0-read_file.py){:target="_blank"} Write a function that reads a text file (UTF8) and prints it to stdout:
 
 - Prototype: `def read_file(filename=""):`
 - You must use the `with` statement
@@ -30,7 +30,7 @@ A school every software engineer would have dreamt of!
 guillaume@ubuntu:~/0x0B$
 ```
    
-1. [Write to a file](./1-write_file.py) Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written:
+1. [Write to a file](./1-write_file.py){:target="_blank"} Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written:
 
 - Prototype: `def write_file(filename="", text=""):`
 - You must use the `with` statement
@@ -53,7 +53,7 @@ This School is so cool!
 guillaume@ubuntu:~/0x0B$
 ```
    
-2. [Append to a file](./2-append_write.py) Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added:
+2. [Append to a file](./2-append_write.py){:target="_blank"} Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added:
 
 - Prototype: `def append_write(filename="", text=""):`
 - If the file doesn’t exist, it should be created
@@ -82,7 +82,7 @@ This School is so cool!
 guillaume@ubuntu:~/0x0B$
 ```
    
-3. [To JSON string](./3-to_json_string.py) Write a function that returns the JSON representation of an object (string):
+3. [To JSON string](./3-to_json_string.py){:target="_blank"} Write a function that returns the JSON representation of an object (string):
 
 - Prototype: `def to_json_string(my_obj):`
 - You don’t need to manage exceptions if the object can’t be serialized.
@@ -127,7 +127,7 @@ guillaume@ubuntu:~/0x0B$ ./3-main.py
 guillaume@ubuntu:~/0x0B$
 ```
    
-4. [From JSON string to Object](./4-from_json_string.py) Write a function that returns an object (Python data structure) represented by a JSON string:
+4. [From JSON string to Object](./4-from_json_string.py){:target="_blank"} Write a function that returns an object (Python data structure) represented by a JSON string:
 
 - Prototype: def from_json_string(my_str):
 - You don’t need to manage exceptions if the JSON string doesn’t represent an object.
@@ -168,7 +168,7 @@ guillaume@ubuntu:~/0x0B$ ./4-main.py
 guillaume@ubuntu:~/0x0B$
 ```
    
-5. [Save Object to a file](./5-save_to_json_file.py) Write a function that writes an Object to a text file, using a JSON representation:
+5. [Save Object to a file](./5-save_to_json_file.py){:target="_blank"} Write a function that writes an Object to a text file, using a JSON representation:
 
 - Prototype: `def save_to_json_file(my_obj, filename):`
 - You must use the `with` statement
@@ -214,7 +214,7 @@ guillaume@ubuntu:~/0x0B$ cat my_set.json ; echo ""
 guillaume@ubuntu:~/0x0B$
 ```
    
-6. [Create object from a JSON file](./6-load_from_json_file.py) Write a function that creates an Object from a “JSON file”:
+6. [Create object from a JSON file](./6-load_from_json_file.py){:target="_blank"} Write a function that creates an Object from a “JSON file”:
 
 - Prototype: `def load_from_json_file(filename):`
 - You must use the `with` statement
@@ -269,7 +269,7 @@ guillaume@ubuntu:~/0x0B$ ./6-main.py
 guillaume@ubuntu:~/0x0B$
 ``` 
    
-7. [Load, add, save](./7-add_item.py) Write a script that adds all arguments to a Python list, and then save them to a file:
+7. [Load, add, save](./7-add_item.py){:target="_blank"} Write a script that adds all arguments to a Python list, and then save them to a file:
 
 - You must use your function `save_to_json_file` from `5-save_to_json_file.py`
 - You must use your function `load_from_json_file` from `6-load_from_json_file.py`
@@ -291,7 +291,7 @@ guillaume@ubuntu:~/0x0B$ cat add_item.json ; echo ""
 guillaume@ubuntu:~/0x0B$
 ```
    
-8. [Class to JSON](./8-class_to_json.py) Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+8. [Class to JSON](./8-class_to_json.py){:target="_blank"} Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
 
 - Prototype: `def class_to_json(obj):`
 - `obj` is an instance of a Class
@@ -381,7 +381,7 @@ guillaume@ubuntu:~/0x0B$ ./8-main_2.py
 guillaume@ubuntu:~/0x0B$
 ```
    
-9. [Student to JSON](./9-student.py) Write a class Student that defines a student by:
+9. [Student to JSON](./9-student.py){:target="_blank"} Write a class Student that defines a student by:
 
 - Public instance attributes:
     - `first_name`
@@ -419,7 +419,7 @@ Bob
 guillaume@ubuntu:~/0x0B$
 ```
 
-10.  [Student to JSON with filter](./10-student.py) Write a class `Student` that defines a student by: (based on `9-student.py`)
+10.  [Student to JSON with filter](./10-student.py){:target="_blank"} Write a class `Student` that defines a student by: (based on `9-student.py`)
 
 - Public instance attributes:
     - `first_name`
@@ -453,7 +453,7 @@ guillaume@ubuntu:~/0x0B$ ./10-main.py
 guillaume@ubuntu:~/0x0B$
 ```
 
-11. [Student to disk and reload](./11-student.py) Write a class `Student` that defines a student by: (based on `10-student.py`)
+11. [Student to disk and reload](./11-student.py){:target="_blank"} Write a class `Student` that defines a student by: (based on `10-student.py`)
 
 - Public instance attributes:
     - `first_name`
@@ -537,7 +537,7 @@ guillaume@ubuntu:~/0x0B$ cat student.json ; echo ""
 guillaume@ubuntu:~/0x0B$
 ```
 
-12. [Pascal's Triangle](./12-pascal_triangle.py) **Technical interview preparation**:
+12. [Pascal's Triangle](./12-pascal_triangle.py){:target="_blank"} **Technical interview preparation**:
 
 - You are not allowed to google anything
 - Whiteboard first
@@ -575,7 +575,7 @@ guillaume@ubuntu:~/0x0B$ ./12-main.py
 guillaume@ubuntu:~/0x0B$
 ```
 
-13. [Search and update](./100-append_after.py) Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
+13. [Search and update](./100-append_after.py){:target="_blank"} Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
 
 - Prototype: `def append_after(filename="", search_string="", new_string=""):`
 - You must use the `with` statement
@@ -617,7 +617,7 @@ But it can be very hard if:
 guillaume@ubuntu:~/0x0B$
 ```
 
-14. [Log parsing](./101-stats.py) Write a script that reads `stdin` line by line and computes metrics:
+14. [Log parsing](./101-stats.py){:target="_blank"} Write a script that reads `stdin` line by line and computes metrics:
 
 - Input format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`
 - Each 10 lines and after a keyboard interruption (`CTRL + C`), prints those statistics since the beginning:
