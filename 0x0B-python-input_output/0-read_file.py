@@ -3,12 +3,12 @@
 
 
 def read_file(filename=""):
-    """ read a file
+    """read a file
 
     Args:
         filename (str, optional): a file's name. Defaults to "".
     """
-    with open(filename, 'r', encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         file_cont = f.read()
-    
+
     print(file_cont)
