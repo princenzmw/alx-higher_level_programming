@@ -6,7 +6,7 @@ import json
 
 
 def load_from_json_file(filename):
-    """ Create a Python object from a JSON file
+    """Create a Python object from a JSON file
 
     Args:
         filename (str): JSON file
@@ -14,6 +14,6 @@ def load_from_json_file(filename):
     Returns:
         A Python object
     """
-    with open(filename, 'r', encoding='utf-8') as file:
+    with open(filename, "r", encoding="utf-8") as file:
         data = json.load(file)
     return data
