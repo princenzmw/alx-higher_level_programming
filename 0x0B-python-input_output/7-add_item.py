@@ -4,6 +4,7 @@
 
 
 import sys
+import os.path
 
 
 if __name__ == "__main__":
@@ -12,9 +13,11 @@ if __name__ == "__main__":
         "6-load_from_json_file"
     ).load_from_json_file
 
-    try:
-        data = load_from_json_file("add_item.json")
-    except FileNotFoundError:
+    file_path = "add_item.json"
+
+    if os.path.isfile(file_path):
+        data = load_from_json_file(file_path)
+    else:
         data = []
 
     data.extend(sys.argv[1:])
