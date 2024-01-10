@@ -11,8 +11,11 @@ if __name__ == "__main__":
     load_from_json_file = __import__(
         "6-load_from_json_file"
     ).load_from_json_file
-    arguments = sys.argv
-    data = list(arguments[1:])
 
+    try:
+        data = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        data = []
+
+    data.extend(sys.argv[1:])
     save_to_json_file(data, "add_item.json")
-    load_from_json_file("add_item.json")
