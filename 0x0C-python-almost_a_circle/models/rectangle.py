@@ -6,7 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Represents a rectangle """
+    """Represents a rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes attributes of the object"""
@@ -41,7 +41,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Sets the value for width"""
-        if (type(value) is not int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
 
         if value <= 0:
@@ -52,7 +52,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Sets the value for height"""
-        if (type(value) is not int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
 
         if value <= 0:
@@ -63,7 +63,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Sets the value for x"""
-        if (type(value) is not int):
+        if type(value) is not int:
             raise TypeError("x must be an integer")
 
         if value < 0:
@@ -74,7 +74,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Sets the value for y"""
-        if (type(value) is not int):
+        if type(value) is not int:
             raise TypeError("y must be an integer")
 
         if value < 0:
@@ -84,10 +84,10 @@ class Rectangle(Base):
 
     def area(self):
         """Defines the area of the rectangle"""
-        return (self.__height * self.__width)
+        return self.__height * self.__width
 
     def display(self):
-        """Displays the rectangle using # """
+        """Displays the rectangle using #"""
         for y in range(self.y):
             print("")
         for row in range(self.__height):
@@ -142,8 +142,12 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle"""
 
-        obj_dictionary = {'id': self.id, 'width': self.__width,
-                          'height': self.__height, 'x': self.__x,
-                          'y': self.__y}
+        obj_dictionary = {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y,
+        }
 
         return obj_dictionary
