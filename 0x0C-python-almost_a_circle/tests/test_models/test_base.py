@@ -83,12 +83,8 @@ class Test_Base(unittest.TestCase):
         r2 = Rectangle(10, 7, 2, 8, 30)
         dictionary = r2.to_dictionary()
         json_dictionary = Base.to_json_string(sorted(dictionary.items()))
-        self.assertEqual(
-            json_dictionary,
-            '[["height", 7], ["id", 30], '
-            '["width", 10],\
-            ["x", 2], ["y", 8]]',
-        )
+        self.assertEqual(json_dictionary, '[["height", 7], ["id", 30], '
+                         '["width", 10], ["x", 2], ["y", 8]]')
         self.assertTrue(type(dictionary) is not type(json_dictionary))
 
         r3 = Rectangle(30, 50)
