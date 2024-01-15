@@ -90,34 +90,22 @@ class Test_Base(unittest.TestCase):
         r3 = Rectangle(30, 50)
         dictionary = r3.to_dictionary()
         json_dictionary = Base.to_json_string(sorted(dictionary.items()))
-        self.assertEqual(
-            json_dictionary,
-            '[["height", 50], ["id", 2], '
-            '["width", 30],\
-            ["x", 0], ["y", 0]]',
-        )
+        self.assertEqual(json_dictionary, '[["height", 50], ["id", 2], '
+                         '["width", 30], ["x", 0], ["y", 0]]')
         self.assertTrue(type(dictionary) is not type(json_dictionary))
 
         r4 = Rectangle(30, 50, 0, 0)
         dictionary = r4.to_dictionary()
         json_dictionary = Base.to_json_string(sorted(dictionary.items()))
-        self.assertEqual(
-            json_dictionary,
-            '[["height", 50], ["id", 3], '
-            '["width", 30],\
-            ["x", 0], ["y", 0]]',
-        )
+        self.assertEqual(json_dictionary, '[["height", 50], ["id", 3], '
+                         '["width", 30], ["x", 0], ["y", 0]]')
         self.assertTrue(type(dictionary) is not type(json_dictionary))
 
         r5 = Rectangle(30, 50, 0, 0, 89)
         dictionary = r5.to_dictionary()
         json_dictionary = Base.to_json_string(sorted(dictionary.items()))
-        self.assertEqual(
-            json_dictionary,
-            '[["height", 50], ["id", 89], '
-            '["width", 30],\
-            ["x", 0], ["y", 0]]',
-        )
+        self.assertEqual(json_dictionary, '[["height", 50], ["id", 89], '
+                         '["width", 30], ["x", 0], ["y", 0]]')
         self.assertTrue(type(dictionary) is not type(json_dictionary))
 
         dictionary = None
