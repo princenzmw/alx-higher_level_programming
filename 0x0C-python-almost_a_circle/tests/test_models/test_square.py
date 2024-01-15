@@ -11,27 +11,24 @@ from io import StringIO
 
 
 class Test_square(unittest.TestCase):
-    """Defines a class to evaluate diferent test cases for square.py file
-    """
+    """Defines a class to evaluate diferent test cases for square.py file"""
 
     def test_instance_class(self):
-        """Checks for a instance of the class
-        """
+        """Checks for a instance of the class"""
         s1 = Square(10)
         self.assertIsInstance(s1, Square)
         self.assertTrue(issubclass(Square, Rectangle))
         self.assertTrue(issubclass(Square, Base))
         self.assertTrue(id(Square) != id(Rectangle))
         self.assertTrue(id(Square) != id(Base))
-        self.assertTrue(type(Square) == type(Rectangle))
-        self.assertTrue(type(Square) == type(Base))
+        self.assertTrue(type(Square) is type(Rectangle))
+        self.assertTrue(type(Square) is type(Base))
         s2 = Square(2)
-        self.assertTrue(type(s1) == type(s2))
+        self.assertTrue(type(s1) is type(s2))
         self.assertFalse(id(s1) == id(s2))
 
     def test_init_attributes(self):
-        """Checks when id is none
-        """
+        """Checks when id is none"""
         s1 = Square(10)
         self.assertEqual(s1.id, 1)
         self.assertEqual(s1.size, 10)
@@ -73,8 +70,7 @@ class Test_square(unittest.TestCase):
         self.assertEqual(s6.y, 50)
 
     def test_raise_errors(self):
-        """Check for raises errors
-        """
+        """Check for raises errors"""
         # checks for instances
         with self.assertRaises(TypeError):
             s1 = Square()
@@ -128,8 +124,7 @@ class Test_square(unittest.TestCase):
             s1.update(id=10, x=10, y=20, size="30")
 
     def test_area(self):
-        """Check area method of square objects
-        """
+        """Check area method of square objects"""
         s1 = Square(3, 2)
         area = s1.area()
         self.assertEqual(area, 9)
@@ -151,47 +146,45 @@ class Test_square(unittest.TestCase):
         self.assertEqual(area, 100)
 
     def test_display(self):
-        """Checks display method for square
-        """
+        """Checks display method for square"""
         output_1 = "#\n"
         s1 = Square(1)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s1.display()
             self.assertEqual(mock_out.getvalue(), output_1)
 
         output_2 = "##\n##\n"
         s2 = Square(2, 0)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s2.display()
             self.assertEqual(mock_out.getvalue(), output_2)
 
         output_3 = "\n\n  ###\n  ###\n  ###\n"
         s3 = Square(3, 2, 2, 2)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s3.display()
             self.assertEqual(mock_out.getvalue(), output_3)
 
         output_4 = "  ##\n  ##\n"
         s4 = Square(2, 2, 0)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s4.display()
             self.assertEqual(mock_out.getvalue(), output_4)
 
         output_5 = "\n\n  ##\n  ##\n"
         s5 = Square(2, 2, 2)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s5.display()
             self.assertEqual(mock_out.getvalue(), output_5)
 
         output_6 = "\n\n\n  ##\n  ##\n"
         s6 = Square(2, 2, 3, 100)
-        with patch('sys.stdout', new=StringIO()) as mock_out:
+        with patch("sys.stdout", new=StringIO()) as mock_out:
             s6.display()
             self.assertEqual(mock_out.getvalue(), output_6)
 
     def test_str(self):
-        """Check str method
-        """
+        """Check str method"""
         s1 = Square(4, 6, 2, 1)
         self.assertEqual(str(s1), "[Square] (1) 6/2 - 4")
         s2 = Square(5, 5, 1)
@@ -202,8 +195,7 @@ class Test_square(unittest.TestCase):
         self.assertEqual(s4.__str__(), "[Square] (50) 6/2 - 4")
 
     def test_update(self):
-        """Check update method
-        """
+        """Check update method"""
         s1 = Square(5)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
         s1.update(10)
@@ -228,31 +220,29 @@ class Test_square(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (50) 10/10 - 10")
 
     def test_dictionary_representation(self):
-        """Check to_dictionary method
-        """
+        """Check to_dictionary method"""
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
-        self.assertEqual(s1_dictionary, {'x': 2, 'y': 1, 'id': 1, 'size': 10})
+        self.assertEqual(s1_dictionary, {"x": 2, "y": 1, "id": 1, "size": 10})
 
         s2 = Square(1, 1)
         s2_dictionary = s2.to_dictionary()
-        self.assertEqual(s2_dictionary, {'x': 1, 'y': 0, 'id': 2, 'size': 1})
+        self.assertEqual(s2_dictionary, {"x": 1, "y": 0, "id": 2, "size": 1})
 
         s3 = Square(10, 0, 2)
         s3_dictionary = s3.to_dictionary()
-        self.assertEqual(s3_dictionary, {'x': 0, 'y': 2, 'id': 3, 'size': 10})
+        self.assertEqual(s3_dictionary, {"x": 0, "y": 2, "id": 3, "size": 10})
 
         s4 = Square(10)
         s4_dictionary = s4.to_dictionary()
-        self.assertEqual(s4_dictionary, {'x': 0, 'y': 0, 'id': 4, 'size': 10})
+        self.assertEqual(s4_dictionary, {"x": 0, "y": 0, "id": 4, "size": 10})
 
         s5 = Square(10, 2, 5, 6)
         s5_dictionary = s5.to_dictionary()
-        self.assertEqual(s5_dictionary, {'x': 2, 'y': 5, 'id': 6, 'size': 10})
+        self.assertEqual(s5_dictionary, {"x": 2, "y": 5, "id": 6, "size": 10})
 
     def tearDown(self):
-        """Tear down test method to reset class attribute
-        """
+        """Tear down test method to reset class attribute"""
         Base._Base__nb_objects = 0
         try:
             os.remove("Rectangle.json")
@@ -271,5 +261,6 @@ class Test_square(unittest.TestCase):
         except Exception:
             pass
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
