@@ -10,7 +10,7 @@ for (const i in argv) {
 }
 
 if (count === 2) {
-  console.log('No Arguments');
+  console.log('No arguments');
 }
 
 if (count === 3) {
