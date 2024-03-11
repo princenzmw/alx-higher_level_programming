@@ -14,5 +14,5 @@ const sorted = myArray.sort((a, b) => b - a);
 if (myArgs.length <= 1) {
   console.log(0);
 } else {
-  console.log(sorted);
+  console.log(sorted[1]);
 }
