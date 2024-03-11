@@ -4,7 +4,7 @@ const { argv } = require('node:process');
 
 const a = parseInt(argv[2]);
 
-function factorial(x) {
+function factorial (x) {
   if (isNaN(x) || x <= 1) {
     return 1;
   }
