@@ -1,4 +1,4 @@
-#!/usr/bin/bnode
+#!/usr/bin/node
 
 class Rectangle {
 }
