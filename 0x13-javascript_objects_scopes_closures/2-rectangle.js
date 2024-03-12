@@ -2,10 +2,11 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (!(isNaN(w) || w < 1 || isNaN(h) || h < 1)) {
-      this.width = w;
-      this.height = h;
+    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
+      return {};
     }
+    this.width = w;
+    this.height = h;
   }
 }
 
