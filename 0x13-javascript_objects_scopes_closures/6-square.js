@@ -8,7 +8,7 @@ class Square extends Squar {
   }
 
   charPrint (c) {
-    if (c === undefined) {
+    if (!c) {
       for (let i = 0; i < this.size; i++) {
         let row = '';
         for (let j = 0; j < this.size; j++) {
