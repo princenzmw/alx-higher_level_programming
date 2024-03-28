@@ -4,4 +4,8 @@
 
 url="$1"
 total_size=$(curl -sI "$url" | grep -i "content-length" | awk '{print $2}' | tr -d '\r')
+if [ -z "$total_size" ]
+then
+      total_size=0
+fi
 echo "$total_size"
